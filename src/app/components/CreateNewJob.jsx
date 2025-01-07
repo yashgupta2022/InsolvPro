@@ -64,7 +64,7 @@ export default function CreateNewJob({setActiveTab}) {
   };
 
   return (
-    <div className="w-full max-w-6xl p-6 bg-white rounded-md shadow-md ">
+    <div className="w-full h-full max-w-6xl p-6 overflow-auto bg-white rounded-md shadow-md ">
       <h2 className="mb-4 text-xl font-bold">Fill in new job details</h2>
       <form className="space-y-4 text-sm">
         {/* Basic Fields */}

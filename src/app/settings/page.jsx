@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 const Settings = () => {
   return (
     <Layout>
-      <div className="max-w-4xl p-8 mx-auto mt-10 bg-white rounded-lg shadow-lg">
+      <div className="max-w-4xl p-8 mx-auto mt-10 mb-10 bg-white rounded-lg shadow-lg">
         <h1 className="mb-6 text-2xl font-semibold text-gray-800">Settings</h1>
         <form className="space-y-6">
           {/* Notification Preferences */}

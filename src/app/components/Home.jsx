@@ -46,7 +46,7 @@ export default function Home() {
       </div>
 
       {/* Tabs */}
-      <div className="w-4/5 flex flex-col items-center space-y-4 max-h-[calc(100vh-200px)] overflow-y-auto">
+      <div className="w-4/5 flex flex-col items-center space-y-4 max-h-[calc(100vh-200px)]">
         {activeTab === 1 && (
             <ActiveJobs setActiveTab={setActiveTab}/>
           

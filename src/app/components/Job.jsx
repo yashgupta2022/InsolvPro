@@ -34,7 +34,7 @@ const JobDetailsView = ({ jobData }) => {
   } = jobs.find((job) => job.id == viewJob);
 
   return (
-    <div className="w-full h-[calc(100vh-100px)] overflow-auto p-4 mx-auto space-y-6 max-w-7xl">
+    <div className="w-full p-4 mx-auto space-y-6 max-w-7xl">
       {/* Header Card */}
       <div className="p-6 bg-white rounded-lg shadow-md">
         <div className="flex items-start justify-between">
@@ -107,13 +107,13 @@ const JobDetailsView = ({ jobData }) => {
           ))}
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 max-h-[calc(100vh-350px)] overflow-y-auto">
           {activeTab === 'company' && (
             <div className="p-6 space-y-6 bg-white rounded-lg shadow-md">
               {/* Company Details */}
               <div>
                 <div className='flex items-center justify-between space-x-4'>
-                <h3 className="text-sm font-semibold text-gray-700">Company Details 
+                <h3 className="text-base font-semibold text-gray-700">Company Details 
                 </h3>
                 {status=='active'  ?<button onClick={()=>setTab(5)} className='flex items-center justify-center p-1 px-3 space-x-1 transition-all duration-200 ease-in-out border-2 border-yellow-400 rounded-lg hover:bg-yellow-400 '> <Edit2Icon className="w-4 h-4" /> <p>Edit</p> </button>
                 :<></>}

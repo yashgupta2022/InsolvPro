@@ -8,7 +8,7 @@ export default function Layout({children}) {
       <Sidebar />
       <div className="flex flex-col flex-1">
         <Header />
-        <main className="flex-1 max-h-[calc(100vh)] overflow-y-auto p-6 bg-gray-100">
+        <main className="flex-1 p-6 overflow-y-auto bg-gray-100">
             
           {children}
         </main>
