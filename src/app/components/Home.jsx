@@ -39,7 +39,7 @@ export default function Home() {
         </button>
         <button
           onClick={() => setActiveTab(3)}
-          className="px-6 py-3 font-semibold text-black transition bg-yellow-500 rounded-md shadow-md hover:bg-yellow-600"
+          className="px-6 py-3 font-semibold text-black transition bg-yellow-500 rounded-md shadow-md hover:bg-yellow-400"
         >
           Create New Job
         </button>

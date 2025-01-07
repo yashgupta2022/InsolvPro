@@ -57,8 +57,16 @@ const JobDetailsView = ({ jobData }) => {
           <div className="text-gray-500 ">
           <div className="text-sm ">Company ID: {companyId}</div>
             <div className="mt-2 text-sm">Start Date: {startDate}</div>
-            {status=='inactive'?<div className="mt-2 text-sm">End Date: {endDate}</div>:
-            <div className="mt-2 text-sm">End Date: <input type='date' className='border-2 rounded-md' onChange={
+            {status=='inactive'?<div className="flex items-center mt-2 space-x-2 text-sm">
+              <p>End Date: {endDate} </p>
+            <button onClick={()=>setJobs(p=>p.map((job)=>{
+                        if(job.id==viewJob){
+                            return {...job,endDate:'', status:'active'}
+                        }
+                        return job
+                    }))} className='flex items-center justify-center p-1 px-1 border-2 border-yellow-400 rounded-lg'> <Edit2Icon className="w-3 h-3" /> </button>
+            </div> :
+            <div className="mt-2 text-sm">End Date: <input type='date' className='border-2 rounded-md cursor-pointer' onChange={
                 (e)=>{
                     setJobs(p=>p.map((job)=>{
                         if(job.id==viewJob){
@@ -107,7 +115,7 @@ const JobDetailsView = ({ jobData }) => {
                 <div className='flex items-center justify-between space-x-4'>
                 <h3 className="text-sm font-semibold text-gray-700">Company Details 
                 </h3>
-                {status=='active'  ?<button onClick={()=>setTab(5)} className='flex items-center justify-center p-1 px-3 border-2 border-yellow-400 rounded-lg'> <Edit2Icon className="w-4 h-4" /> Edit </button>
+                {status=='active'  ?<button onClick={()=>setTab(5)} className='flex items-center justify-center p-1 px-3 space-x-1 transition-all duration-200 ease-in-out border-2 border-yellow-400 rounded-lg hover:bg-yellow-400 '> <Edit2Icon className="w-4 h-4" /> <p>Edit</p> </button>
                 :<></>}
                 </div>
                

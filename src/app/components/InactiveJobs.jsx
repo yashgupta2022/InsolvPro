@@ -8,7 +8,7 @@ export default function ActiveJobs({setActiveTab}) {
     const [viewJob, setViewJob] = useRecoilState(viewJobState);
     return (
         <div className='w-full'>
-        <h2 className="w-full mb-4 text-2xl font-bold">Active Jobs</h2>
+        <h2 className="w-full mb-4 text-2xl font-bold">Inactive Jobs</h2>
         
         <div className="flex flex-col items-center mt-4 space-y-4">
             {jobs.filter(p=>p.status=='inactive').map((job, index) => (
