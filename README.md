@@ -1,2 +1,0 @@
-# InsolvPro
-An Insolvency Tool
