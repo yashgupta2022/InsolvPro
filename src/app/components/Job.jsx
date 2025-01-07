@@ -10,7 +10,6 @@ const JobDetailsView = ({ jobData }) => {
   const [viewJob, setViewJob] = useRecoilState(viewJobState);
   const [jobs, setJobs] = useRecoilState(jobState);
   const [tab,setTab] = useRecoilState(modalState)
-  console.log(jobs.find((job) => job.id == viewJob));
   const {
     id,
     companyName,
